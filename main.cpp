@@ -3,7 +3,7 @@
 #include "filelib/file.cpp"
 
 int main(){
-    test();
-    // testFileLib();
+//    test();
+     testFileLib();
     return 0;
 }
