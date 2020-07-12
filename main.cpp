@@ -1,9 +1,9 @@
 #include<iostream>
-#include "pathlib/path.cpp"
-#include "filelib/file.cpp"
+#include "./pathlib/path.h"
+#include "./filelib/file.h"
 
 int main(){
-//    test();
-     testFileLib();
+    test();
+//     testFileLib();
     return 0;
 }

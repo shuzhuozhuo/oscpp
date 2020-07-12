@@ -1,9 +1,12 @@
 #include<string>
 #include<cstdarg>
+#include "iostream"
 #include<vector>
-#include"path_lib.h"
+#include"path.h"
 
 using namespace std;
+
+string SEP = "/";
 
 vector<string> pathlib::split(string path){
 
@@ -20,7 +23,7 @@ vector<string> pathlib::split(string path){
         }
         else break;
     }
-    cout << "i is " << i << endl;
+    std::cout << "i is " << i << endl;
     head = path.substr(0, i);
     tail = path.substr(i);
 
@@ -106,11 +109,13 @@ string pathlib::join(std::initializer_list<T> list){
     string str;
     for(T i: list){
         str += i;
-        str += "/";
+        str += SEP;
     }
     str.pop_back();
     return pathlib::removeRedundantSep(str);
 }
+
+
 
 void test(){
 
@@ -120,5 +125,8 @@ void test(){
     string path;
     path = pathlib::join({args1, args2, args3});
     cout << "join path is " << path << endl;
-
+    vector<string> a;
+    a = pathlib::splittext(path);
+    cout << "0" << a[0] << endl;
+    cout << "1" << a[1] << endl;
 }

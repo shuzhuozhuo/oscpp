@@ -2,7 +2,6 @@
 #include<iostream>
 #include<vector>
 
-
 template<typename T>
 void ostools::show1dVector(std::vector<T> vec){
 
